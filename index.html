@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>eviivo Assessment — Diallo Eromosele</title>
+<title>eviivo Assessment - Dallo Eromosele</title>
 <style>
   :root {
     --ink: #1a1a2e;
@@ -384,14 +384,14 @@
   <div class="header">
     <div class="tag">Take-Home Assessment</div>
     <h1>Senior Product Owner</h1>
-    <div class="subtitle">eviivo — Dom's Squad</div>
+    <div class="subtitle">eviivo - Dom's Squad</div>
     <div class="meta">Diallo Eromosele &bull; February 2026</div>
   </div>
 
   <!-- ==================== SECTION 1: API ==================== -->
   <div class="section">
     <div class="section-label api"><span class="dot"></span> Section 1</div>
-    <h2>API — Booking.com Messaging API</h2>
+    <h2>API - Booking.com Messaging API</h2>
 
     <!-- 1a -->
     <h3>1a) Message vs. Conversation</h3>
@@ -421,11 +421,11 @@
 
     <p>A <strong>conversation</strong> is the container grouping all communication between a property and guest for a specific reservation. Each reservation auto-creates an empty conversation, identified by a <code>conversation_id</code> and linked to the booking via <code>conversation_reference</code>. It always has exactly two participants: property and guest.</p>
 
-    <p>A <strong>message</strong> is an individual piece of content within a conversation — with its own <code>message_id</code>, <code>timestamp</code>, <code>sender</code>, and <code>content</code>. From API v1.2, messages also carry a <code>message_type</code> (free_text, email, automatically_sent_template, self_service_event, or request_to_book_event).</p>
+    <p>A <strong>message</strong> is an individual piece of content within a conversation - with its own <code>message_id</code>, <code>timestamp</code>, <code>sender</code>, and <code>content</code>. From API v1.2, messages also carry a <code>message_type</code> (free_text, email, automatically_sent_template, self_service_event, or request_to_book_event).</p>
 
     <div class="card blue">
       <div class="card-label">Why this matters for eviivo</div>
-      <p style="margin-bottom:0;font-size:14px;">The separation enables a clean, reservation-scoped inbox. Tags operate at different levels — <code>read</code> applies to individual messages, while <code>no_reply_needed</code> applies to the whole conversation — reinforcing why they are architecturally distinct.</p>
+      <p style="margin-bottom:0;font-size:14px;">The separation enables a clean, reservation-scoped inbox. Tags operate at different levels - <code>read</code> applies to individual messages, while <code>no_reply_needed</code> applies to the whole conversation - reinforcing why they are architecturally distinct.</p>
     </div>
 
     <!-- 1b -->
@@ -442,7 +442,7 @@
 }
     </div>
 
-    <p>POST is required because sending a message <strong>creates a new resource</strong>. Each call produces a unique <code>message_id</code> — this is not idempotent (calling twice creates two messages).</p>
+    <p>POST is required because sending a message <strong>creates a new resource</strong>. Each call produces a unique <code>message_id</code> - this is not idempotent (calling twice creates two messages).</p>
 
     <div class="diagram">
       <div class="diagram-title">HTTP Methods in the Messaging API</div>
@@ -466,28 +466,28 @@
       </div>
       <div class="tag-card">
         <div class="tag-name"><span class="emoji">🏷️</span> Topic / Category</div>
-        <div class="tag-desc">Tags like "check-in", "parking", "payment", "complaint", "upsell" — enabling reporting on what guests most commonly ask. AI-powered detection extends this beyond Booking.com's structured requests.</div>
+        <div class="tag-desc">Tags like "check-in", "parking", "payment", "complaint", "upsell" - enabling reporting on what guests most commonly ask. AI-powered detection extends this beyond Booking.com's structured requests.</div>
       </div>
       <div class="tag-card">
         <div class="tag-name"><span class="emoji">⏰</span> Follow-up Required</div>
-        <div class="tag-desc">Beyond "no reply needed" — a "follow-up required" tag with optional date/time reminder prevents messages falling through the cracks.</div>
+        <div class="tag-desc">Beyond "no reply needed" - a "follow-up required" tag with optional date/time reminder prevents messages falling through the cracks.</div>
       </div>
       <div class="tag-card">
         <div class="tag-name"><span class="emoji">😊</span> Sentiment</div>
-        <div class="tag-desc">AI auto-tags sentiment (positive/neutral/negative). Properties spot unhappy guests before they leave negative reviews — enabling proactive service recovery.</div>
+        <div class="tag-desc">AI auto-tags sentiment (positive/neutral/negative). Properties spot unhappy guests before they leave negative reviews - enabling proactive service recovery.</div>
       </div>
       <div class="tag-card" style="grid-column: span 2;">
         <div class="tag-name"><span class="emoji">💰</span> Revenue Opportunity</div>
-        <div class="tag-desc">When a guest mentions upgrades, extended stays, or additional services, an "upsell" tag routes these to a specific workflow — directly tying messaging to revenue generation via eviivo's Performance Manager.</div>
+        <div class="tag-desc">When a guest mentions upgrades, extended stays, or additional services, an "upsell" tag routes these to a specific workflow - directly tying messaging to revenue generation via eviivo's Performance Manager.</div>
       </div>
     </div>
 
     <!-- 1d -->
-    <h3>1d) Optional Features — Enhancing eviivo</h3>
+    <h3>1d) Optional Features - Enhancing eviivo</h3>
 
     <div class="card purple">
       <div class="card-label">Self-Service Requests (v1.2)</div>
-      <p style="font-size:14px;">Structured guest requests covering check-in, parking, bed type, extra crib/bed — approximately <strong>60% of all messages</strong> to partners.</p>
+      <p style="font-size:14px;">Structured guest requests covering check-in, parking, bed type, extra crib/bed - approximately <strong>60% of all messages</strong> to partners.</p>
       <p style="font-size:14px;margin-bottom:0;"><strong>eviivo opportunity:</strong> AI Concierge auto-responds using property data already in eviivo Suite. A guest requests parking info at 11pm → Concierge retrieves parking details from Property Manager → sends instant reply. No human intervention needed.</p>
     </div>
 
@@ -498,7 +498,7 @@
 
     <div class="card green">
       <div class="card-label">Attachments</div>
-      <p style="font-size:14px;margin-bottom:0;">Properties send visual check-in instructions, key box photos, local maps, or menus. eviivo could add reusable attachment libraries — commonly sent images (parking instructions, Wi-Fi cards) become one-click away.</p>
+      <p style="font-size:14px;margin-bottom:0;">Properties send visual check-in instructions, key box photos, local maps, or menus. eviivo could add reusable attachment libraries - commonly sent images (parking instructions, Wi-Fi cards) become one-click away.</p>
     </div>
 
     <div class="card amber">
@@ -507,7 +507,7 @@
     </div>
 
     <!-- 1e -->
-    <h3>1e) Deprecation Notice — Migration Work</h3>
+    <h3>1e) Deprecation Notice - Migration Work</h3>
 
     <div class="quote">
       "We are soon going to deprecate retrieving latest messages by using the <code>GET /messages/latest</code> endpoint and confirming their retrieval using the <code>PUT /messages</code> endpoint. Use the Connectivity Notification Service to receive notifications of newly created messages."
@@ -599,7 +599,7 @@
   <!-- ==================== SECTION 2: DB ==================== -->
   <div class="section">
     <div class="section-label db"><span class="dot"></span> Section 2</div>
-    <h2>DB — SQL and Database Design</h2>
+    <h2>DB - SQL and Database Design</h2>
 
     <!-- 2a -->
     <h3>2a) Advising Andre</h3>
@@ -628,7 +628,7 @@
       </div>
     </div>
 
-    <p>The <code>AND</code> operator requires <em>both</em> conditions to be true for the same row — logically impossible for a single field. <code>OR</code> returns rows matching either value.</p>
+    <p>The <code>AND</code> operator requires <em>both</em> conditions to be true for the same row - logically impossible for a single field. <code>OR</code> returns rows matching either value.</p>
 
     <p><strong>Alternative approach</strong> using pattern matching if Andre is unsure of all possible spellings:</p>
 
@@ -651,7 +651,7 @@
         <tr>
           <td><code>CustomerId</code></td>
           <td><span class="badge required">Required</span></td>
-          <td>Primary key — unique identifier for each member. Auto-generated. Essential for all table relationships.</td>
+          <td>Primary key - unique identifier for each member. Auto-generated. Essential for all table relationships.</td>
         </tr>
         <tr>
           <td><code>FirstName</code></td>
@@ -699,8 +699,8 @@
 
     <p><strong>Key decisions in this query:</strong></p>
     <ul>
-      <li><strong>LEFT JOIN</strong> (not INNER JOIN) — includes customers who never borrowed a book, counted as 0. Critical for an accurate average.</li>
-      <li><strong>Subquery approach</strong> — first counts per customer, then averages. Transparent and easy to extend.</li>
+      <li><strong>LEFT JOIN</strong> (not INNER JOIN) - includes customers who never borrowed a book, counted as 0. Critical for an accurate average.</li>
+      <li><strong>Subquery approach</strong> - first counts per customer, then averages. Transparent and easy to extend.</li>
     </ul>
 
     <div class="card amber">
@@ -716,7 +716,7 @@
 
   <!-- FOOTER -->
   <div style="text-align:center;padding:32px 0;color:var(--gray-400);font-size:13px;border-top:1px solid var(--gray-200);">
-    — End of Assessment —
+    
   </div>
 
 </div>
